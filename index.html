@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mon piano</title>
+</head>
+
+<body>
+    <h1>Mon piano</h1>
+    <button id="note1">Note 1</button>
+    <button id="note2">Note 2</button>
+    <button id="note3">Note 3</button>
+    <script>
+        function playNote(note) {
+            fetch('http://localhost:3000/play', {
+                method: 'post',
+               headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({a: note})
+            }).then(
+                console.log('ok')
+            )
+        }
+        document.getElementById('note1').addEventListener('click', function () {
+            playNote(16565);
+        });
+        document.getElementById('note2').addEventListener('click', function () {
+            playNote(556562);
+        });
+        document.getElementById('note3').addEventListener('click', function () {
+            playNote(38655);
+        });
+    </script>
+</body>
+
+</html>
