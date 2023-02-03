@@ -14,7 +14,7 @@
         function playNote(note) {
             fetch('http://localhost:3000/play', {
                 method: 'post',
-               headers: {
+                headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 },
@@ -24,13 +24,13 @@
             )
         }
         document.getElementById('note1').addEventListener('click', function () {
-            playNote(16565);
+            playNote(1);
         });
         document.getElementById('note2').addEventListener('click', function () {
-            playNote(556562);
+            playNote(2);
         });
         document.getElementById('note3').addEventListener('click', function () {
-            playNote(38655);
+            playNote(3);
         });
     </script>
 </body>
