@@ -26,13 +26,20 @@ def playNote(notepure):
       buzzer.on()
       time.sleep(0.2)
       buzzer.off()
+      tone(buzzerfrequence[330],500)
     
       print('sing1')
         
   elif notepure == 2:
+      buzzer.on()
+      time.sleep(0.2)
+      buzzer.off()
       print('sing2')
       # Jouer la deuxième note ici
   elif notepure == 3:
+      buzzer.on()
+      time.sleep(0.2)
+      buzzer.off()
       print('sing3')
       # Jouer la troisième note ici
     
